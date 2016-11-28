@@ -25,6 +25,9 @@ Once you have successfully deployed the war file, the Swagger endpoints can be a
 2. Testing Swagger UI
 
     `http://localhost:8080/rest-springfox/swagger-ui.html`
+    
+If you are interested in knowing more about this project, you can find in my blog 
+['Swagger for the REST of Us'](https://indrabasak.wordpress.com/2016/04/06/swagger-for-the-rest-of-us/)    .
 
 
 [travis-badge]: https://travis-ci.org/indrabasak/rest-springfox.svg?branch=master
