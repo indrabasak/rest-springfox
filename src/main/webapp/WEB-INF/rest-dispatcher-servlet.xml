@@ -1,7 +1,7 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:context="http://www.springframework.org/schema/context"
-	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
         http://www.springframework.org/schema/beans     
         http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
         http://www.springframework.org/schema/context 
@@ -9,41 +9,41 @@
         http://www.springframework.org/schema/mvc
         http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd">
 
-	<!-- DispatcherServlet Context: defines this servlet's request-processing 
-		infrastructure -->
-	<!-- ================================================================== -->
-	<!-- Annotation Configuration -->
-	<!-- ================================================================== -->
-	<context:annotation-config />
+    <!-- DispatcherServlet Context: defines this servlet's request-processing
+        infrastructure -->
+    <!-- ================================================================== -->
+    <!-- Annotation Configuration -->
+    <!-- ================================================================== -->
+    <context:annotation-config/>
 
-	<!-- Enables the Spring MVC @Controller programming model -->
-	<mvc:annotation-driven>
-		<mvc:message-converters>
-			<!-- Configure bean to convert JSON to POJO and vice versa -->
-			<bean
-				class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
-			</bean>
-			<!-- Configure bean to convert XML to POJO and vice versa -->
-			<bean
-				class="org.springframework.http.converter.xml.Jaxb2RootElementHttpMessageConverter" />
-			<bean class="org.springframework.http.converter.StringHttpMessageConverter" />
-		</mvc:message-converters>
-	</mvc:annotation-driven>
-	
-	<!-- Direct static mappings -->
-	<mvc:resources mapping="swagger-ui.html" location="classpath:/META-INF/resources/" />
-	<mvc:resources mapping="/webjars/**" location="classpath:/META-INF/resources/webjars/" />
+    <!-- Enables the Spring MVC @Controller programming model -->
+    <mvc:annotation-driven>
+        <mvc:message-converters>
+            <!-- Configure bean to convert JSON to POJO and vice versa -->
+            <bean
+                    class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
+            </bean>
+            <!-- Configure bean to convert XML to POJO and vice versa -->
+            <bean
+                    class="org.springframework.http.converter.xml.Jaxb2RootElementHttpMessageConverter"/>
+            <bean class="org.springframework.http.converter.StringHttpMessageConverter"/>
+        </mvc:message-converters>
+    </mvc:annotation-driven>
 
-	<!-- ================================================================== -->
-	<!-- MVC Controllers -->
-	<!-- ================================================================== -->
-	<context:component-scan
-		base-package="basaki;basaki.service;basaki.service.controller;basaki.service.impl;basaki.data" />
+    <!-- Direct static mappings -->
+    <mvc:resources mapping="swagger-ui.html" location="classpath:/META-INF/resources/"/>
+    <mvc:resources mapping="/webjars/**" location="classpath:/META-INF/resources/webjars/"/>
 
-	<bean id="messageSource"
-		class="org.springframework.context.support.ResourceBundleMessageSource">
-		<property name="basenames">
-			<value>locale\messages</value>
-		</property>
-	</bean>
+    <!-- ================================================================== -->
+    <!-- MVC Controllers -->
+    <!-- ================================================================== -->
+    <context:component-scan
+            base-package="basaki;basaki.service;basaki.service.controller;basaki.service.impl;basaki.data"/>
+
+    <bean id="messageSource"
+          class="org.springframework.context.support.ResourceBundleMessageSource">
+        <property name="basenames">
+            <value>locale\messages</value>
+        </property>
+    </bean>
 </beans>

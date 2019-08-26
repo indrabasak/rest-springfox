@@ -7,11 +7,11 @@ public class CustomerNotFoundException extends RuntimeException {
     private final int id;
 
     public CustomerNotFoundException(String message, int id) {
-	super(message);
-	this.id = id;
+        super(message);
+        this.id = id;
     }
 
     public int getId() {
-	return id;
+        return id;
     }
 }

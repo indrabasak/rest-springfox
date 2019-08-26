@@ -17,41 +17,41 @@ public class ErrorInfo {
     }
 
     public ErrorInfo(String url, int code, String type, String message) {
-	this.url = url;
-	this.code = code;
-	this.type = type;
-	this.message = message;
+        this.url = url;
+        this.code = code;
+        this.type = type;
+        this.message = message;
     }
 
     public String getUrl() {
-	return url;
+        return url;
     }
 
     public void setUrl(String url) {
-	this.url = url;
+        this.url = url;
     }
 
     public int getCode() {
-	return code;
+        return code;
     }
 
     public void setCode(int code) {
-	this.code = code;
+        this.code = code;
     }
 
     public String getType() {
-	return type;
+        return type;
     }
 
     public void setType(String type) {
-	this.type = type;
+        this.type = type;
     }
 
     public String getMessage() {
-	return message;
+        return message;
     }
 
     public void setMessage(String message) {
-	this.message = message;
+        this.message = message;
     }
 }

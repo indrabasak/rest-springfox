@@ -1,8 +1,8 @@
 package basaki.service;
 
-import java.util.List;
-
 import basaki.data.Customer;
+
+import java.util.List;
 
 public interface CustomerService {
 
